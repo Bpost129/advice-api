@@ -15,12 +15,12 @@ const Landing = ({ quote, fetchAdvice }) => {
   //   fetchAdvice()
   // }, [])
 
-  if (!quote) return <h1>Want Some Advice?</h1>
+  if (!quote.length) return <h1>Want Some Advice?</h1>
 
   return (
     <>
       <h1>Want Some Advice?</h1>
-      <p>{quote.slip.advice}</p>
+      {/* <p>{quote.slip.advice}</p> */}
       <button onClick={() => fetchAdvice()}>Need More Advice?</button>
 
     </>
