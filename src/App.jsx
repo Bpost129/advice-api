@@ -12,8 +12,8 @@ function App() {
   
   const fetchAdvice = async () => {
     const adviceData = await getAdvice()
-    setQuote(adviceData)
-    console.log('quote:: ' + adviceData)
+    setQuote(adviceData.slip.advice)
+    console.log('quote:: ' + adviceData.slip.advice)
   }
   
   useEffect(() => {
