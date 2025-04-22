@@ -8,25 +8,25 @@ import { getAdvice } from "./services/advice-api"
 import './App.css'
 
 function App() {
-  const [advice, setAdvice] = useState({})
+  const [quote, setQuote] = useState({})
   
   const fetchAdvice = async () => {
     const adviceData = await getAdvice()
-    setAdvice(adviceData)
-    console.log(adviceData)
+    setQuote(adviceData)
+    console.log('quote:: ' + adviceData)
   }
   
   useEffect(() => {
     fetchAdvice()
   }, [])
 
-  if (!advice) return <h1>Want Some Advice?</h1>
+  if (!quote) return <h1>Want Some Advice?</h1>
 
   return (
     <>
       <main>
         <Routes>
-          <Route path='/' element={<Landing advice={advice} fetchAdvice={fetchAdvice} />} />
+          <Route path='/' element={<Landing quote={quote} fetchAdvice={fetchAdvice} />} />
         </Routes>
       </main>
     </>
