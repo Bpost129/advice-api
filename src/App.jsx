@@ -10,13 +10,13 @@ import './App.css'
 function App() {
   const [advice, setAdvice] = useState({})
   
+  const fetchAdvice = async () => {
+    const adviceData = await getAdvice()
+    setAdvice(adviceData)
+    console.log(adviceData)
+  }
   
   useEffect(() => {
-    const fetchAdvice = async () => {
-      const adviceData = await getAdvice()
-      setAdvice(adviceData)
-      console.log(adviceData)
-    }
     fetchAdvice()
   }, [])
 
@@ -26,7 +26,7 @@ function App() {
     <>
       <main>
         <Routes>
-          <Route path='/' element={<Landing advice={advice} />} />
+          <Route path='/' element={<Landing advice={advice} fetchAdvice={fetchAdvice} />} />
         </Routes>
       </main>
     </>
