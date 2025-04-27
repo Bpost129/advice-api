@@ -16,8 +16,11 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(94, 52, 132);
 }
 
