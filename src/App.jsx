@@ -14,7 +14,6 @@ function App() {
     const adviceData = await getAdvice()
     setQuote(adviceData.slip.advice)
     console.log('quote::' + adviceData.slip.advice)
-    console.log('hey')
   }
   
   useEffect(() => {
