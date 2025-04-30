@@ -21,7 +21,7 @@ h1 {
   padding: 16px;
   height: 150px;
   width: 550px;
-
+  background-color: rgba(97, 68, 121, 0.979);
 }
 
 #advice-container > p {
