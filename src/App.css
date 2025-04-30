@@ -26,6 +26,7 @@ h1 {
 
 #advice-container > p {
   justify-self: flex-start;
+  font-size: 20px;
 }
 
 #refresh-btn {
