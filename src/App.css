@@ -1,13 +1,32 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
 h1 {
   font-size: 40px;
   text-shadow: 1px 4px 2px black;
+}
+
+#navbar {
+  top: 0;
+  margin: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.548);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 8px;
+  border-radius: 0 0 20px 20px;
+  /* position: fixed; */
+  /* align-self: center; */
+}
+
+#navbar > a {
+  color: white;
+  text-decoration: none;
 }
 
 #advice-container {

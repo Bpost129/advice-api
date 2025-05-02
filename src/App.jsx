@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+import NavBar from './components/Nav/NavBar'
 import Landing from './pages/Landing/Landing'
 
 import { getAdvice } from "./services/advice-api"
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <NavBar />
       <main>
         <Routes>
           <Route path='/' element={<Landing quote={quote} fetchAdvice={fetchAdvice} />} />
