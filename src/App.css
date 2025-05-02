@@ -20,8 +20,6 @@ h1 {
   justify-content: space-evenly;
   padding: 8px;
   border-radius: 0 0 20px 20px;
-  /* position: fixed; */
-  /* align-self: center; */
 }
 
 #navbar > a {
