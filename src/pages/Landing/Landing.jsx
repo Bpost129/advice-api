@@ -1,7 +1,3 @@
-// import { useState, useEffect } from "react"
-
-// import { getAdvice } from "../../services/advice-api"
-
 const Landing = () => {
   return (
     <>
