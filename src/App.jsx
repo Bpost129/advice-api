@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import NavBar from './components/Nav/NavBar'
 import Landing from './pages/Landing/Landing'
+import Advice from './pages/Advice/Advice'
 
 import { getAdvice } from "./services/advice-api"
 
@@ -28,7 +29,8 @@ function App() {
       <NavBar />
       <main>
         <Routes>
-          <Route path='/' element={<Landing quote={quote} fetchAdvice={fetchAdvice} />} />
+          <Route path='/' element={<Landing />} />
+          <Route path='/advice' element={<Advice quote={quote} fetchAdvice={fetchAdvice} />} />
         </Routes>
       </main>
     </>

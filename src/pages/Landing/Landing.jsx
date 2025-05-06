@@ -2,17 +2,10 @@
 
 // import { getAdvice } from "../../services/advice-api"
 
-const Landing = ({ quote, fetchAdvice }) => {
-  if (!quote.length) return <h1>Advice?</h1>
-
+const Landing = () => {
   return (
     <>
-      <h1>Want Some Advice?</h1>
-      {/* <p>#{quote.id}</p> */}
-      <div id="advice-container">
-        <p>{quote}</p>
-        <button id="refresh-btn" onClick={() => fetchAdvice()}>Need More Advice?</button>
-      </div>
+      <h1>Test out some simple API's!</h1>
     </>
   )
 }
