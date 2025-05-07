@@ -13,18 +13,18 @@ import './App.css'
 
 function App() {
   const [quote, setQuote] = useState({})
-  const [questions, setQuestions] = useState({})
+  const [questions, setQuestions] = useState([])
   
   const fetchAdvice = async () => {
     const adviceData = await getAdvice()
     setQuote(adviceData.slip.advice)
-    console.log('quote::' + adviceData.slip.advice)
+    // console.log('quote::' + adviceData.slip.advice)
   }
 
   const fetchTrivia = async () => {
     const questionData = await getTriviaQuestions()
-    setQuestions(questionData)
-    console.log(questionData)
+    setQuestions(questionData.results)
+    // console.log('questions::' + questionData.results)
   }
   
   useEffect(() => {
@@ -41,7 +41,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/advice' element={<Advice quote={quote} fetchAdvice={fetchAdvice} />} />
-          <Route path='/trivia' element={<Trivia />} />
+          <Route path='/trivia' element={<Trivia questions={questions} />} />
         </Routes>
       </main>
     </>
