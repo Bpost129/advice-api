@@ -1,4 +1,5 @@
 const Advice = ({ quote, fetchAdvice }) => {
+  
   if (!quote.length) return <h1>Advice?</h1>
 
   return (
