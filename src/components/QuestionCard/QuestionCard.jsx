@@ -2,12 +2,12 @@ const QuestionCard = ({ question }) => {
   return (
     <div className="question-card">
       <h3>{question.question}</h3>
-      <ul>
-        <li>{question.correct_answer}</li>
+      <select>
+        <option>{question.correct_answer}</option>
         {question.incorrect_answers.map(ans =>
-          <li key={ans}>{ans}</li>
+          <option key={ans}>{ans}</option>
         )}
-      </ul>
+      </select>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 
-import { getTriviaQuestions } from "../../services/trivia-api"
-
 import QuestionCard from "../../components/QuestionCard/QuestionCard"
+
+import { getTriviaQuestions } from "../../services/trivia-api"
 
 const Trivia = () => {
   const [questions, setQuestions] = useState([])
@@ -10,7 +10,7 @@ const Trivia = () => {
   const fetchTrivia = async () => {
     const questionData = await getTriviaQuestions()
     setQuestions(questionData.results)
-    console.log("questions:: " + questionData.results)
+    console.log(questionData.results)
   }
   
   useEffect(() => {
@@ -24,7 +24,7 @@ const Trivia = () => {
       <h1>Test out some Trivia!</h1>
       <div className="questions">
         {questions.map(question => 
-          <QuestionCard key={question.id} question={question} />
+          <QuestionCard key={question._id} question={question} />
         )}
       </div>
     </>
