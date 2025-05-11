@@ -1,0 +1,1 @@
+const baseUrl = "https://dad-jokes.p.rapidapi.com"
